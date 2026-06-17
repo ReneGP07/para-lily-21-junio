@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un mes más por nosotros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main>
+    <section id="welcome" class="welcome-screen">
+      <div class="envelope" aria-hidden="true">
+        <div class="envelope-back"></div>
+        <div class="paper-peek"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+      </div>
+
+      <p class="date">21 de junio</p>
+      <h1>Un mes más por nosotros<br>y para nosotros</h1>
+      <p class="intro">
+        Para ti, aunque hoy estemos lejos.  
+        Una carta para volver al inicio y recordarte cómo empecé a quererte.
+      </p>
+
+      <div class="welcome-music">
+        <p>Escoge la canción para leer esta carta</p>
+
+        <div class="song-options">
+          <button type="button" class="song-choice primary-button" data-video="60rlboK94mE">
+            Olivia Garden
+          </button>
+          <button type="button" class="song-choice secondary-button" data-video="lulmfoic__0">
+            Mia & Sebastian’s Theme
+          </button>
+        </div>
+
+        <div id="youtubeMiniPlayer" class="youtube-mini-player hidden">
+          <iframe
+            id="songFrame"
+            src=""
+            title="Canción para Lily"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <a id="openYoutubeLink" class="youtube-open-link hidden" href="#" target="_blank" rel="noopener">
+          Abrir canción en YouTube
+        </a>
+
+        <small>En celular, el audio empieza cuando ella toca play en el reproductor.</small>
+      </div>
+
+
+      <button id="openLetterBtn" class="primary-button" type="button">Leer carta</button>
+    </section>
+
+    <section id="bookSection" class="book-section hidden">
+      <div class="book-header">
+        <p class="eyebrow">Carta para Lily</p>
+        <h2 id="chapterTitle">Prólogo</h2>
+        <p id="chapterSubtitle">Una carta antes de empezar la historia</p>
+      </div>
+
+      <div class="book-wrap">
+        <button id="prevBtn" class="nav-button left" aria-label="Hoja anterior">‹</button>
+
+        <article id="page" class="page">
+          <div class="page-inner">
+            <p id="chapterLabel" class="chapter-label">Prólogo</p>
+            <div id="chapterContent" class="chapter-content"></div>
+          </div>
+        </article>
+
+        <button id="nextBtn" class="nav-button right" aria-label="Siguiente hoja">›</button>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <p id="pageCounter">1 / 10</p>
+      </div>
+
+      <div class="mobile-controls">
+        <button id="prevBtnMobile" class="secondary-button">Anterior</button>
+        <button id="nextBtnMobile" class="secondary-button">Continuar</button>
+      </div>
+    </section>
+
+
+
+    <section id="gallerySection" class="gallery-section hidden">
+      <p class="eyebrow">Después de la carta</p>
+      <h2>Recuerdos de nosotros</h2>
+      <p class="gallery-intro">
+        Después de volver al inicio de nuestra historia, quería dejar aquí algunos pedacitos nuestros.
+        Fotos que me recuerdan una cosa: de las cosas que más amo, están tu mirada y tu sonrisa.
+      </p>
+      <div class="music-note">Si pusiste la canción al inicio, puede seguir sonando mientras lees.</div>
+<div class="floating-phrase phrase-one">tu mirada</div>
+      <div class="floating-phrase phrase-two">tu sonrisa</div>
+      <div class="floating-phrase phrase-three">las cosas que más amo</div>
+
+      <div class="deck-section">
+        <p class="eyebrow">Como una baraja de recuerdos</p>
+        <h2>Uno por uno</h2>
+        <p class="gallery-intro">
+          Toca continuar para ir pasando cada recuerdo. Como si tomáramos la foto de arriba
+          y la pusiéramos abajo, una y otra vez.
+        </p>
+
+        <div class="deck-wrap">
+          <div class="deck-stack" id="deckStack">
+            
+          <figure class="deck-card active" data-slide="1">
+            <img src="assets/photos/foto-01.jpg" alt="Recuerdo 1">
+            <figcaption>Tal vez todo empezó sin avisar, pero desde entonces tu mirada se me quedó en el corazón.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="2">
+            <img src="assets/photos/foto-02.jpg" alt="Recuerdo 2">
+            <figcaption>De las cosas que más amo, una de las primeras fue descubrir lo bonita que se veía tu sonrisa.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="3">
+            <img src="assets/photos/foto-03.jpg" alt="Recuerdo 3">
+            <figcaption>A veces pienso que todo comenzó en silencio, con una foto tuya y mis nervios haciendo travesuras.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="4">
+            <img src="assets/photos/foto-04.jpg" alt="Recuerdo 4">
+            <figcaption>Desde aquellos formatos, yo ya encontraba pretextos pequeños para quedarme pensando en ti.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="5">
+            <img src="assets/photos/foto-05.jpg" alt="Recuerdo 5">
+            <figcaption>Tu mirada tiene esa forma linda de aparecer y dejarme feliz por dentro.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="6">
+            <img src="assets/photos/foto-06.jpg" alt="Recuerdo 6">
+            <figcaption>No sé en qué momento empecé a quererte tanto, pero tu sonrisa tuvo mucho que ver.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="7">
+            <img src="assets/photos/foto-07.jpg" alt="Recuerdo 7">
+            <figcaption>Todavía me acuerdo de cuando me quedaba viendo tu foto y pensaba lo hermosa que eras.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="8">
+            <img src="assets/photos/foto-08.jpg" alt="Recuerdo 8">
+            <figcaption>Hay sonrisas que alegran un momento; la tuya cambió muchos de mis días.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="9">
+            <img src="assets/photos/foto-09.jpg" alt="Recuerdo 9">
+            <figcaption>Lo más bonito de ese verano fue que tú apareciste sin saber todo lo que ibas a significar para mí.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="10">
+            <img src="assets/photos/foto-10.jpg" alt="Recuerdo 10">
+            <figcaption>Tus ojitos siempre tuvieron algo especial; hasta en broma lograban desarmarme.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="11">
+            <img src="assets/photos/foto-11.jpg" alt="Recuerdo 11">
+            <figcaption>Hay recuerdos sencillos que se vuelven gigantes solo porque estabas tú.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="12">
+            <img src="assets/photos/foto-12.jpg" alt="Recuerdo 12">
+            <figcaption>Todavía me da ternura recordar aquella vaquera preciosa que se me quedó bien presente.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="13">
+            <img src="assets/photos/foto-13.jpg" alt="Recuerdo 13">
+            <figcaption>Tu sonrisa se volvió una de mis rutas favoritas, incluso antes de que yo lo aceptara.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="14">
+            <img src="assets/photos/foto-14.jpg" alt="Recuerdo 14">
+            <figcaption>Entre mensajes, pláticas y coincidencias, fui entendiendo que quería seguirte conociendo.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="15">
+            <img src="assets/photos/foto-15.jpg" alt="Recuerdo 15">
+            <figcaption>Octubre no sabía lo que hacía cuando decidió acercarnos un poquito más.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="16">
+            <img src="assets/photos/foto-16.jpg" alt="Recuerdo 16">
+            <figcaption>Me gustas así: con tu mirada tranquila, tu sonrisa bonita y esa manera tuya de quedarte conmigo.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="17">
+            <img src="assets/photos/foto-17.jpg" alt="Recuerdo 17">
+            <figcaption>A veces el corazón entiende primero; el mío ya se estaba enamorando mientras yo apenas lo notaba.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="18">
+            <img src="assets/photos/foto-18.jpg" alt="Recuerdo 18">
+            <figcaption>Un café contigo, una tarde tranquila y yo sintiéndome feliz como si el mundo se hubiera acomodado.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="19">
+            <img src="assets/photos/foto-19.jpg" alt="Recuerdo 19">
+            <figcaption>Quién diría que hasta una papaya podía volverse un recuerdo bonito si era contigo.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="20">
+            <img src="assets/photos/foto-20.jpg" alt="Recuerdo 20">
+            <figcaption>En el parque, entre cosas simples, empecé a sentir que lo simple contigo se volvía especial.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="21">
+            <img src="assets/photos/foto-21.jpg" alt="Recuerdo 21">
+            <figcaption>Te guardé comida, pero la verdad es que también te estaba guardando un espacio enorme en mi corazón.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="22">
+            <img src="assets/photos/foto-22.jpg" alt="Recuerdo 22">
+            <figcaption>Mi primo no me preguntó si me gustabas; lo supo. Y yo también lo supe cuando sonreí.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="23">
+            <img src="assets/photos/foto-23.jpg" alt="Recuerdo 23">
+            <figcaption>Hasta pescando pensaba en ti; ahí entendí que quería volver a verte más de lo que quería quedarme.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="24">
+            <img src="assets/photos/foto-24.jpg" alt="Recuerdo 24">
+            <figcaption>Cruzar la ciudad por tu sonrisa empezó a sentirse como una de mis cosas favoritas.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="25">
+            <img src="assets/photos/foto-25.jpg" alt="Recuerdo 25">
+            <figcaption>Hay miradas que se recuerdan; la tuya se volvió hogar para mí.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="26">
+            <img src="assets/photos/foto-26.jpg" alt="Recuerdo 26">
+            <figcaption>Lo del pan de muerto fue más que un antojo; fue otra forma de decirte que quería verte feliz.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="27">
+            <img src="assets/photos/foto-27.jpg" alt="Recuerdo 27">
+            <figcaption>Ese día acepté lo que ya venía creciendo: me estaba enamorando de ti de la forma más bonita.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="28">
+            <img src="assets/photos/foto-28.jpg" alt="Recuerdo 28">
+            <figcaption>Si un día necesitas algo, solo pídemelo; y si no existe, lo invento... porque contigo así me nace.</figcaption>
+          </figure>
+          <figure class="deck-card" data-slide="29">
+            <img src="assets/photos/foto-29.jpg" alt="Recuerdo 29">
+            <figcaption>De todas las cosas lindas que me han pasado, una de mis favoritas es haberte conocido y seguirte amando.</figcaption>
+          </figure>
+          </div>
+
+          <div class="deck-controls">
+            <button id="deckPrev" class="secondary-button" type="button">Anterior</button>
+            <p id="deckCounter">1 / 29</p>
+            <button id="deckNext" class="primary-button" type="button">Continuar</button>
+          </div>
+          <div class="collage-access-card">
+            <p>Cuando termines de ver los recuerdos, puedes seguir con el collage.</p>
+            <button id="openCollageAlwaysBtn" class="primary-button" type="button">Ver collage</button>
+          </div>
+</div>
+      </div>
+<div class="collage-section hidden" id="collageSection">
+        <p class="eyebrow">Un poco desordenado, como los recuerdos bonitos</p>
+        <h2>Todo esto también somos</h2>
+        <p class="gallery-intro">
+          No quise acomodarlo perfecto, porque lo bonito de nosotros ha pasado así:
+          sin planearlo tanto, pero encontrando su lugar.
+        </p>
+        <div class="collage-wall">
+          <img class="collage-photo collage-1" src="assets/photos/foto-01.jpg" alt="Foto collage 1"><img class="collage-photo collage-2" src="assets/photos/foto-02.jpg" alt="Foto collage 2"><img class="collage-photo collage-3" src="assets/photos/foto-03.jpg" alt="Foto collage 3"><img class="collage-photo collage-4" src="assets/photos/foto-04.jpg" alt="Foto collage 4"><img class="collage-photo collage-5" src="assets/photos/foto-05.jpg" alt="Foto collage 5"><img class="collage-photo collage-6" src="assets/photos/foto-06.jpg" alt="Foto collage 6"><img class="collage-photo collage-7" src="assets/photos/foto-07.jpg" alt="Foto collage 7"><img class="collage-photo collage-8" src="assets/photos/foto-08.jpg" alt="Foto collage 8"><img class="collage-photo collage-9" src="assets/photos/foto-09.jpg" alt="Foto collage 9"><img class="collage-photo collage-10" src="assets/photos/foto-10.jpg" alt="Foto collage 10"><img class="collage-photo collage-11" src="assets/photos/foto-11.jpg" alt="Foto collage 11"><img class="collage-photo collage-12" src="assets/photos/foto-12.jpg" alt="Foto collage 12"><img class="collage-photo collage-1" src="assets/photos/foto-13.jpg" alt="Foto collage 13"><img class="collage-photo collage-2" src="assets/photos/foto-14.jpg" alt="Foto collage 14"><img class="collage-photo collage-3" src="assets/photos/foto-15.jpg" alt="Foto collage 15"><img class="collage-photo collage-4" src="assets/photos/foto-16.jpg" alt="Foto collage 16"><img class="collage-photo collage-5" src="assets/photos/foto-17.jpg" alt="Foto collage 17"><img class="collage-photo collage-6" src="assets/photos/foto-18.jpg" alt="Foto collage 18"><img class="collage-photo collage-7" src="assets/photos/foto-19.jpg" alt="Foto collage 19"><img class="collage-photo collage-8" src="assets/photos/foto-20.jpg" alt="Foto collage 20"><img class="collage-photo collage-9" src="assets/photos/foto-21.jpg" alt="Foto collage 21"><img class="collage-photo collage-10" src="assets/photos/foto-22.jpg" alt="Foto collage 22"><img class="collage-photo collage-11" src="assets/photos/foto-23.jpg" alt="Foto collage 23"><img class="collage-photo collage-12" src="assets/photos/foto-24.jpg" alt="Foto collage 24"><img class="collage-photo collage-1" src="assets/photos/foto-25.jpg" alt="Foto collage 25"><img class="collage-photo collage-2" src="assets/photos/foto-26.jpg" alt="Foto collage 26"><img class="collage-photo collage-3" src="assets/photos/foto-27.jpg" alt="Foto collage 27"><img class="collage-photo collage-4" src="assets/photos/foto-28.jpg" alt="Foto collage 28"><img class="collage-photo collage-5" src="assets/photos/foto-29.jpg" alt="Foto collage 29">
+        </div>
+        <button id="showFrameBtn" class="primary-button stage-button" type="button">Siguiente</button>
+      </div>
+
+      <div class="photo-frame-section hidden" id="frameSection">
+        <div class="photo-frame">
+          <div class="frame-photos">
+            <img src="assets/photos/foto-01.jpg" alt="Foto marco 1"><img src="assets/photos/foto-02.jpg" alt="Foto marco 2"><img src="assets/photos/foto-03.jpg" alt="Foto marco 3"><img src="assets/photos/foto-04.jpg" alt="Foto marco 4"><img src="assets/photos/foto-05.jpg" alt="Foto marco 5"><img src="assets/photos/foto-06.jpg" alt="Foto marco 6"><img src="assets/photos/foto-07.jpg" alt="Foto marco 7"><img src="assets/photos/foto-08.jpg" alt="Foto marco 8"><img src="assets/photos/foto-09.jpg" alt="Foto marco 9"><img src="assets/photos/foto-10.jpg" alt="Foto marco 10"><img src="assets/photos/foto-11.jpg" alt="Foto marco 11"><img src="assets/photos/foto-12.jpg" alt="Foto marco 12"><img src="assets/photos/foto-13.jpg" alt="Foto marco 13"><img src="assets/photos/foto-14.jpg" alt="Foto marco 14"><img src="assets/photos/foto-15.jpg" alt="Foto marco 15"><img src="assets/photos/foto-16.jpg" alt="Foto marco 16"><img src="assets/photos/foto-17.jpg" alt="Foto marco 17"><img src="assets/photos/foto-18.jpg" alt="Foto marco 18"><img src="assets/photos/foto-19.jpg" alt="Foto marco 19"><img src="assets/photos/foto-20.jpg" alt="Foto marco 20"><img src="assets/photos/foto-21.jpg" alt="Foto marco 21"><img src="assets/photos/foto-22.jpg" alt="Foto marco 22"><img src="assets/photos/foto-23.jpg" alt="Foto marco 23"><img src="assets/photos/foto-24.jpg" alt="Foto marco 24"><img src="assets/photos/foto-25.jpg" alt="Foto marco 25"><img src="assets/photos/foto-26.jpg" alt="Foto marco 26"><img src="assets/photos/foto-27.jpg" alt="Foto marco 27"><img src="assets/photos/foto-28.jpg" alt="Foto marco 28"><img src="assets/photos/foto-29.jpg" alt="Foto marco 29">
+          </div>
+          <div class="frame-message">
+            <p>Feliz de conocerte</p>
+            <h3>y de permitirme pasar otro mes a tu lado.</h3>
+            <span>Con amor, René</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-card hidden" id="finalCard">
+        <h3>Feliz un mes más, mi amor.</h3>
+        <p>
+          Aunque hoy estemos lejos, yo sigo aquí.
+          Quererte también es encontrar formas de estar cerca.
+        </p>
+        <button id="secretBtn" class="primary-button" type="button">Toca aquí si me extrañas</button>
+        <p id="secretMessage" class="secret-message hidden">
+          Yo también. Más de lo que te digo. Y si algo no existe para hacerte sonreír, lo invento.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <script>
+const chapters=[{label:'Prólogo',title:'Antes de empezar',subtitle:'Una carta para volver al inicio',content:`<p>Mi amor, hoy es 21 de junio, y aunque la distancia quiera sentirse grande, yo quería encontrar una forma de acercarme a ti.</p><p>No con cualquier mensaje, no con algo rápido, sino con una carta que pudiera quedarse contigo, aunque yo no pueda estar ahí para dártela en las manos.</p><p>Porque este es un mes más por nosotros, y para nosotros.</p><p>Y porque a veces uno ama tanto, que necesita volver al inicio para entender cómo fue que todo empezó.</p>`},{label:'Capítulo I',title:'El verano en que apareciste',subtitle:'Cuando todavía no sabía quién eras',content:`<p>En el verano de 2025 te conocí sin saber todavía quién eras.</p><p>Llegaste buscando ayuda con alguien más, y por alguna de esas vueltas raras de la vida, terminaste conviviendo conmigo.</p><p>Yo no sabía entonces que esa coincidencia iba a convertirse en una de las historias más bonitas de mi vida.</p><p>Días después, el 10 de julio, me mandaste mensaje por WhatsApp. Y luego, el 29 de julio, fuiste a buscarme.</p>`},{label:'Capítulo II',title:'Tu foto de perfil',subtitle:'La travesura más bonita',content:`<p>Ese 29 de julio lo recuerdo muy bien.</p><p>Me escribiste para pedirme unos formatos, y después de eso, sin que tú lo supieras, yo me quedé viendo tu foto de perfil.</p><p>La vi una vez. Después otra. Y después varias más.</p><p>Pensé en lo hermosa que eras, en lo linda que te veías, en esa forma tuya de aparecer sin hacer ruido y dejarme pensando más de lo normal.</p><p>Me daba nervio hacerlo. Como si estuviera haciendo una travesura. Como si mirar tu foto fuera algo pequeño, pero al mismo tiempo enorme.</p>`},{label:'Capítulo III',title:'La vaquera de agosto',subtitle:'Un día que se quedó muy presente',content:`<p>Durante el semestre fuiste varias veces a verme. A veces hablábamos porque teníamos que hablar, por formatos, por pendientes, por cosas que parecían normales.</p><p>Pero yo hacía siempre lo mismo: te ibas, y yo volvía a ver tu foto.</p><p>Después llegó el jueves de tu cumpleaños, el 28 de agosto. Fuiste por tu vale y yo te felicité.</p><p>Ibas vestida como vaquera, y eso me encantó.</p><p>No puedo decirte que ese día me enamoré de ti, porque sería cambiar la historia, pero sí puedo decirte algo: ese día se me quedó muy grabado.</p><p>Te vi con mucha ternura. Como si hubiera algo en ti que me diera calma, curiosidad y una sonrisa por dentro.</p>`},{label:'Capítulo IV',title:'Octubre nos puso atención',subtitle:'Cuando algo empezó a sentirse distinto',content:`<p>A inicios de septiembre vinieron días difíciles para mí. Estaba intentando acomodarme, entender mi ritmo, empezar la maestría, ajustarme a todo lo nuevo.</p><p>Y aunque ese mes no estuvimos tan cerca, creo que la vida no tenía prisa.</p><p>Ya en octubre me animé a molestarte por primera vez. Poco a poco, sin saber exactamente qué estaba haciendo, me fui acercando.</p><p>Hasta el 27 de octubre.</p><p>Ese día siento que tú me pusiste atención, y que yo también te puse atención a ti de una forma distinta.</p><p>El 29 hablamos por mensaje. Y el 30 me pediste ayuda con tu tarea para el sábado.</p><p>Yo no sabía bien cómo ayudarte, pero pensé: “Bueno, no me cuesta nada intentarlo”. Aunque la verdad era otra: yo quería hacerlo.</p>`},{label:'Capítulo V',title:'Los ojitos y los vales',subtitle:'Una broma que empezó a moverlo todo',content:`<p>Ese mismo día 30 te fuiste de antro. Yo quería llevarte al cine, pero no pude.</p><p>Entonces terminé diciéndote lo único que se me ocurrió: “Deberías hacerle ojitos al chavito de los vales, a ver si te da más vales”.</p><p>Y tú me dijiste que no sabías cómo hacerle ojitos.</p><p>Entonces yo te dije: “Los mismos que estás haciendo ahorita sirven para ver si te da más vales”.</p><p>Y así, entre bromas, algo empezó a sentirse diferente.</p><p>El 31 estuvimos conviviendo juntos, platicando, conversando. Tal vez fue una de las pláticas más equis de nuestra vida, pero para mí no fue equis.</p><p>Porque estabas tú.</p><p>Te acompañé a tu coche y luego te pregunté si podía ver el motor. Quizá no era una gran escena de película, pero sí era muy nosotros.</p>`},{label:'Capítulo VI',title:'Almuerzo, café y una papaya',subtitle:'El sábado en que me sentí feliz',content:`<p>Ese viernes tú fuiste a una fiesta y yo fui a cenar con mis amigos.</p><p>Y hablando con ellos me di cuenta de algo que ya venía creciendo: sí me gustabas.</p><p>No solo quería ayudarte. No solo quería verte pasar. No solo quería bromear contigo. Quería conocerte.</p><p>Entonces, de pasar a ayudarte un sábado cualquiera, pasé por ti a FIME y te llevé a almorzar.</p><p>Ahí hablamos de ti, de mí, de cosas simples, de cosas que iban saliendo. Y creo que fue la primera vez que sentí algo bonito al verte.</p><p>Me sentía feliz.</p><p>Comimos. Bebimos café. Pasamos una tarde amena. Después te llevé al HEB porque tenía que comprar leche.</p><p>Y en el HEB me volvió a dar hambre. Yo quería algo de botana, pero tú terminaste eligiendo una papaya.</p><p>Yo compré la fruta. Tú compraste un cuchillo. Le hablaste a tu familia, y después pasamos un rato en el parque frente a tu departamento.</p>`},{label:'Capítulo VII',title:'La presa y tu sonrisa',subtitle:'Cuando crucé mi plan por verte',content:`<p>Cuando me despedí de ti y salí de ahí, llegué a mi casa, me dormí un rato y después fui a la fiesta de mi mamá por su cumpleaños.</p><p>Te guardé comida.</p><p>Y por algún motivo extraño, no dejaba de pensarte.</p><p>Le conté a un primo sobre ti y se rió. No me preguntó si me gustabas. Me lo dijo como afirmación: “Te gusta”.</p><p>Y yo sonreí. Dije que sí.</p><p>Dije que no sabía qué iba a pasar, pero que me sentía feliz. Y también dije algo que para mí era importante: yo no quería solo salir contigo y ya. Yo quería conocerte bien. Quería que fueras mi novia.</p><p>Esa noche solo le avisé a mi mamá que me iría a pescar. Y salí rumbo a la Presa de la Boca.</p><p>A la mañana siguiente desperté feliz. Parte de mí estaba contento porque iba a pescar, pero otra parte estaba feliz porque te estaba conociendo.</p><p>Llegué a la presa. Había mucha gente pescando. Era Día de Muertos. Y aun así, yo pensaba más en verte que en quedarme ahí.</p><p>Entonces decidí regresarme temprano para llevarte de almorzar. Ahí me di cuenta de que algo en mí ya estaba cambiando.</p><p>Porque crucé la carretera, dejé mi plan, moví mi día, solo por volver a ver tu sonrisa.</p>`},{label:'Capítulo VIII',title:'Pan de muerto',subtitle:'El día que acepté que te iba a amar',content:`<p>Ese mismo domingo me invitaste a pasar, pero yo no me sentía del todo cómodo, así que solo te vi afuera un rato y luego me regresé.</p><p>Pero antes de irme, me dijiste algo que se me quedó: que era el primer año que no habías comido pan de muerto.</p><p>Y yo, que ya estaba encontrando cualquier razón para verte sonreír, decidí llevarte al día siguiente por pan de muerto a Pan de Pan.</p><p>Ese día también lo recuerdo mucho.</p><p>En la mañana dejé a mi papá en el aeropuerto y a como pude intenté regresar hecho un rayo a la escuela para estar ahí a las 10 y poder llevarte por un pan.</p><p>Y fue ese día cuando yo acepté algo dentro de mí: te iba a amar.</p><p>Porque volví a cruzar la ciudad solo para verte sonreír.</p><p>Y no se sintió como esfuerzo. No se sintió como obligación. Se sintió como una decisión bonita.</p><p>Como si mi corazón dijera: “por ella, sí”.</p>`},{label:'Capítulo IX',title:'Si no existe, lo invento',subtitle:'Desde entonces',content:`<p>Ese día te dije: “Quiero conocerte, solo dame tiempo”.</p><p>Y también te dije algo que todavía siento igual:</p><p>“Si un día necesitas algo, solo pídemelo; y si no existe, lo invento”.</p><p>Desde entonces no me he despegado de ti.</p><p>No porque no exista distancia, no porque todo sea perfecto, no porque siempre sea fácil.</p><p>Sino porque hay personas que llegan a la vida y sin pedir permiso se vuelven hogar.</p><p>Tú llegaste así.</p><p>Con tus mensajes, tus vueltas, tu forma de mirarme, tus ojitos, tu sonrisa, tu manera de hacerme querer cruzar la ciudad, cruzar planes, cruzar miedos, cruzar cualquier cosa con tal de verte feliz.</p><p>Gracias, Lily, por existir en mi vida. Gracias por permitirme amarte.</p><p>Sé que esta historia tú ya la conoces, pero esta es la forma en la que yo la viví.</p><p>Y aunque pasaron más cosas en ese tiempo, aunque hay detalles que todavía guardo, aunque podría contarte mucho más… ¿dónde estaría lo divertido si te lo cuento todo ya?</p><p>Feliz un mes más, mi amor.</p><p>Con amor,<br>René</p>`}];
+
+(function () {
+  let currentChapter = 0;
+  let currentDeck = 0;
+
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  function show(el) {
+    if (el) el.classList.remove("hidden");
+  }
+
+  function hide(el) {
+    if (el) el.classList.add("hidden");
+  }
+
+  function goTo(el) {
+    if (el) window.scrollTo({ top: el.offsetTop, behavior: "smooth" });
+  }
+
+  function renderChapter(direction = "next") {
+    const chapter = chapters[currentChapter];
+
+    const page = $("page");
+    if (page) {
+      page.classList.remove("turning-next", "turning-prev");
+      void page.offsetWidth;
+      page.classList.add(direction === "prev" ? "turning-prev" : "turning-next");
+    }
+
+    setTimeout(function () {
+      $("chapterTitle").textContent = chapter.title;
+      $("chapterSubtitle").textContent = chapter.subtitle;
+      $("chapterLabel").textContent = chapter.label;
+      $("chapterContent").innerHTML = chapter.content;
+      $("pageCounter").textContent = `${currentChapter + 1} / ${chapters.length}`;
+      $("progressFill").style.width = `${((currentChapter + 1) / chapters.length) * 100}%`;
+
+      $("prevBtn").disabled = currentChapter === 0;
+      $("prevBtnMobile").disabled = currentChapter === 0;
+
+      const isLast = currentChapter === chapters.length - 1;
+      $("nextBtn").textContent = isLast ? "♥" : "›";
+      $("nextBtnMobile").textContent = isLast ? "Ver fotos" : "Continuar";
+
+      if (page) page.classList.remove("turning-next", "turning-prev");
+      goTo($("bookSection"));
+    }, 180);
+  }
+
+  function openLetter() {
+    hide($("welcome"));
+    show($("bookSection"));
+    renderChapter();
+  }
+
+  function nextChapter() {
+    if (currentChapter < chapters.length - 1) {
+      currentChapter++;
+      renderChapter("next");
+      return;
+    }
+
+    hide($("bookSection"));
+    show($("gallerySection"));
+    updateDeck();
+    goTo($("gallerySection"));
+  }
+
+  function prevChapter() {
+    if (currentChapter > 0) {
+      currentChapter--;
+      renderChapter("prev");
+    }
+  }
+
+  function updateDeck() {
+    const cards = Array.from(document.querySelectorAll(".deck-card"));
+    const total = cards.length;
+
+    cards.forEach(function (card, index) {
+      card.classList.remove("active", "behind-1", "behind-2", "behind-3", "leaving");
+
+      const offset = (index - currentDeck + total) % total;
+      if (offset === 0) card.classList.add("active");
+      if (offset === 1) card.classList.add("behind-1");
+      if (offset === 2) card.classList.add("behind-2");
+      if (offset === 3) card.classList.add("behind-3");
+    });
+
+    if ($("deckCounter")) $("deckCounter").textContent = `${currentDeck + 1} / ${total}`;
+    if ($("deckPrev")) $("deckPrev").disabled = currentDeck === 0;
+    if ($("deckNext")) $("deckNext").textContent = currentDeck === total - 1 ? "Volver a empezar" : "Continuar";
+  }
+
+  function nextDeck() {
+    const cards = Array.from(document.querySelectorAll(".deck-card"));
+    const total = cards.length;
+    if (!total) return;
+
+    cards[currentDeck].classList.add("leaving");
+
+    setTimeout(function () {
+      currentDeck = currentDeck < total - 1 ? currentDeck + 1 : 0;
+      updateDeck();
+    }, 180);
+  }
+
+  function prevDeck() {
+    if (currentDeck > 0) {
+      currentDeck--;
+      updateDeck();
+    }
+  }
+
+  function openCollage() {
+    show($("collageSection"));
+    const btn = $("openCollageAlwaysBtn");
+    if (btn) {
+      btn.textContent = "Collage abierto";
+      btn.disabled = true;
+    }
+    goTo($("collageSection"));
+  }
+
+  function openFrame() {
+    show($("frameSection"));
+    show($("finalCard"));
+    const btn = $("showFrameBtn");
+    if (btn) btn.style.display = "none";
+    goTo($("frameSection"));
+  }
+
+  function chooseSong(button) {
+    const videoId = button.dataset.video;
+    const frame = $("songFrame");
+    const player = $("youtubeMiniPlayer");
+    const link = $("openYoutubeLink");
+
+    if (frame) {
+      frame.src = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`;
+    }
+
+    show(player);
+
+    if (link) {
+      link.href = `https://www.youtube.com/watch?v=${videoId}`;
+      show(link);
+    }
+
+    document.querySelectorAll(".song-choice").forEach(function (choice) {
+      choice.classList.remove("selected-song");
+    });
+    button.classList.add("selected-song");
+  }
+
+  function revealSecret() {
+    show($("secretMessage"));
+    if ($("secretBtn")) $("secretBtn").style.display = "none";
+  }
+
+  function bind() {
+    const openLetterBtn = $("openLetterBtn");
+    if (openLetterBtn) openLetterBtn.addEventListener("click", openLetter);
+
+    const nextBtn = $("nextBtn");
+    if (nextBtn) nextBtn.addEventListener("click", nextChapter);
+
+    const nextBtnMobile = $("nextBtnMobile");
+    if (nextBtnMobile) nextBtnMobile.addEventListener("click", nextChapter);
+
+    const prevBtn = $("prevBtn");
+    if (prevBtn) prevBtn.addEventListener("click", prevChapter);
+
+    const prevBtnMobile = $("prevBtnMobile");
+    if (prevBtnMobile) prevBtnMobile.addEventListener("click", prevChapter);
+
+    const deckNext = $("deckNext");
+    if (deckNext) deckNext.addEventListener("click", nextDeck);
+
+    const deckPrev = $("deckPrev");
+    if (deckPrev) deckPrev.addEventListener("click", prevDeck);
+
+    const collageBtn = $("openCollageAlwaysBtn");
+    if (collageBtn) collageBtn.addEventListener("click", openCollage);
+
+    const frameBtn = $("showFrameBtn");
+    if (frameBtn) frameBtn.addEventListener("click", openFrame);
+
+    const secretBtn = $("secretBtn");
+    if (secretBtn) secretBtn.addEventListener("click", revealSecret);
+
+    document.querySelectorAll(".song-choice").forEach(function (button) {
+      button.addEventListener("click", function () {
+        chooseSong(button);
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bind);
+  } else {
+    bind();
+  }
+
+  window.cartaLilyDebug = {
+    openLetter,
+    nextChapter,
+    openCollage,
+    openFrame
+  };
+})();
+
+  </script>
+</body>
+</html>
